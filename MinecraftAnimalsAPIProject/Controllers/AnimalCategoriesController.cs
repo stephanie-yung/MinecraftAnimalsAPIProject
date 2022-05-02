@@ -168,7 +168,7 @@ namespace MCAnimalsAPI.Controllers
 
 
 
-            if (animalCategories.AnimalCategoriesId == AnimalCategoriesId)
+            if (animalCategories != null)
             {
 
                 _context.AnimalCategories.Remove(animalCategories);
