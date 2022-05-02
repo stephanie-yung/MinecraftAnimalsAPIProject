@@ -11,6 +11,8 @@
 
 ## Summary
 
+The API I chose to create is a Minecraft Animals API based on Animal Categories and branched onto the category of Breedable Animals. My API follows the MVC (Model-View Controller) software design pattern. I have two controllers based on Animal Categories and Breedable Animals. I have created Data Models for my Animal Categories, Breedable Animals, and Response in the section [Data Modeling](#data-modeling) .
+
 The API is divided into two main sections:
 
 1. Breedable Animals
@@ -73,6 +75,18 @@ class AnimalCategories {
     public int AnimalCategoriesId { get; set; }
     public string AnimalCategory { get; set; }
     public BreedableAnimal? BreedableAnimal { get; set; }
+
+}
+```
+
+### Response Model
+
+```javascript
+class Response {
+	public int statusCode { get; set; }
+	public string? statusDescription { get; set; }
+	public List<BreedableAnimal> breedableanimalsresponse { get; set; } = new();
+	public List<AnimalCategories> animalcategoriesresponse { get; set; } = new();
 
 }
 ```
