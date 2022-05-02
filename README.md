@@ -62,8 +62,6 @@ class BreedableAnimal {
     public string Spawn { get; set; }
     public string UsableItems { get; set; }
     public int AnimalCategoriesId { get; set; }
-
-    public AnimalCategories AnimalCategories { get; set; }
 }
 ```
 
@@ -74,6 +72,7 @@ class AnimalCategories {
     [Key]
     public int AnimalCategoriesId { get; set; }
     public string AnimalCategory { get; set; }
+    public BreedableAnimal? BreedableAnimal { get; set; }
 
 }
 ```
